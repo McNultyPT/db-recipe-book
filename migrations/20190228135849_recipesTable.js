@@ -4,12 +4,19 @@ exports.up = function(knex, Promise) {
         tbl.increments();
 
         tbl
+            .integer('dish_id')
+            .unsigned()
+            .references('id')
+            .inTable('dishes')
+            .onUpdate('CASCADE')
+
+        tbl
             .string('name', 128)
             .notNullable()
             .unique();
 
         tbl
-            .string('instructions')
+            .text('instructions')
             .notNullable();
 
         tbl.timestamps(true, true);
