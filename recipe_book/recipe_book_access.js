@@ -4,8 +4,20 @@ const db = knex(config.development);
 
 module.exports = {
     getDishes,
-    addDish,
-    getDish,
-    getRecipes,
-    addRecipe
 };
+
+function getDishes() {
+    return db('dishes')
+}
+
+// function getDish(id) {
+//     return db('dishes')
+//         .where({ id })
+//         .first();
+// }
+
+// async function addDish(dish) {
+//     const [id] = await db('dishes').insert(dish);
+
+//     return getDish(id);
+// }
