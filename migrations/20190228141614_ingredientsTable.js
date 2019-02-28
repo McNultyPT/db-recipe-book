@@ -8,10 +8,6 @@ exports.up = function(knex, Promise) {
             .notNullable()
             .unique();
 
-        tbl
-            .integer('quantity')
-            .notNullable();
-
         tbl.timestamps(true, true);
     });
 };

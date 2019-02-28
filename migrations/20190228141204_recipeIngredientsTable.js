@@ -2,6 +2,10 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('recipe_ingredients', function(tbl) {
         tbl
+        .integer('quantity')
+        .notNullable();
+        
+        tbl
             .integer('recipe_id')
             .unsigned()
             .references('id')
