@@ -43,5 +43,3 @@ Organize and name your files anyway you see fit.
 - add a table of unit of measure convertions, so that we can record the quantity for an **ingredient** using a unit of measure and see the values for other units reading the recipe.
 - design and build a front end client for your API.
 - add a `getShoppingList(recipeId)` that returns a list of all the recipe's ingredients including the quantity of each.
-
-initial push
